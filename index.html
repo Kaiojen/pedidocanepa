@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nós 💖</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Dancing+Script:wght@500;700&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="initials">L & C</h1>
+            <p class="hero-phrase">
+                “A nossa história não começou aqui…<br>
+                <span>Mas foi aqui que eu tive certeza de que era você.”</span>
+            </p>
+            <a href="#timeline" class="btn-scroll">Ver nossa história</a>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="timeline" id="timeline">
+        <div class="container">
+            <h2 class="section-title reveal-on-scroll reveal-up">Nossa história</h2>
+            
+            <div class="timeline-container">
+                <div class="timeline-item">
+                    <div class="timeline-img reveal-on-scroll reveal-from-left">
+                        <img src="img/qnd tudo começou.jpeg" alt="O começo de tudo" loading="lazy" decoding="async">
+                    </div>
+                    <div class="timeline-text reveal-on-scroll reveal-up">
+                        <p>Onde tudo começou.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-img reveal-on-scroll reveal-from-right">
+                        <img src="img/Quando eu percebi que era diferente..jpeg" alt="Quando eu percebi" loading="lazy" decoding="async">
+                    </div>
+                    <div class="timeline-text reveal-on-scroll reveal-up">
+                        <p>Quando eu percebi que com você era diferente.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-img reveal-on-scroll reveal-from-left">
+                        <img src="img/A gente sendo a gente..jpeg" alt="A gente sendo a gente" loading="lazy" decoding="async">
+                    </div>
+                    <div class="timeline-text reveal-on-scroll reveal-up">
+                        <p>A gente sendo a gente, do nosso jeito.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery">
+        <div class="container">
+            <h2 class="section-title reveal-on-scroll reveal-up">Momentos</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item memory-card reveal-on-scroll reveal-zoom" tabindex="0" aria-label="Momento especial sobre crescimento profissional">
+                    <img src="img/momento1.jpeg" alt="Momento especial 1" loading="lazy" decoding="async">
+                    <div class="memory-overlay">
+                        <span class="memory-kicker">Seu brilho</span>
+                        <p>Estar ao seu lado em um momento tão importante da sua vida, te vendo crescer profissionalmente e sorrir fazendo o que ama, ficou guardado em mim de um jeito muito especial.</p>
+                    </div>
+                </div>
+                <div class="gallery-item video-item reveal-on-scroll reveal-zoom">
+                    <video controls preload="metadata" playsinline>
+                        <source src="video/video1.mp4" type="video/mp4">
+                        Seu navegador não suporta vídeos.
+                    </video>
+                </div>
+                <div class="gallery-item memory-card reveal-on-scroll reveal-zoom" tabindex="0" aria-label="Momento especial sobre formatura">
+                    <img src="img/momento2.jpeg" alt="Momento especial 2" loading="lazy" decoding="async">
+                    <div class="memory-overlay">
+                        <span class="memory-kicker">Para sempre</span>
+                        <p>Ter você presente na minha formatura, em um dia tão importante para mim, me marcou profundamente. É uma lembrança que vai ficar eternizada na nossa história.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final Message Section -->
+    <section class="final">
+        <div class="container reveal-on-scroll reveal-up">
+            <h2 class="final-title">É você.</h2>
+            <div class="final-text">
+                <p>Depois de tudo que a gente viveu,</p>
+                <p>meu coração só confirmou uma coisa:</p>
+                <p><strong>é com você que eu quero viver o meu tudo.</strong></p>
+            </div>
+            <h1 class="love-you">eu te amo 💖</h1>
+        </div>
+    </section>
+
+    <!-- Proposal Section -->
+    <section class="proposal">
+        <div class="container reveal-on-scroll reveal-up">
+            <div class="proposal-card">
+                <h3>Quer namorar comigo?</h3>
+                <div class="proposal-buttons">
+                    <button class="btn-yes" onclick="celebrate()">Sim 💖</button>
+                    <button id="btn-no" class="btn-no">Não</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Celebration Overlay -->
+    <div id="celebration-overlay" class="hidden">
+        <div class="celebration-content">
+            <h2 id="celebration-msg">Agora oficialmente nós 💖</h2>
+            <p class="celebration-subtext">Você disse sim para nós. Que a gente continue escolhendo o amor em cada detalhe.</p>
+            <div class="hearts-container"></div>
+            <button class="btn-close" onclick="closeCelebration()">Rever nossa página ✨</button>
+        </div>
+    </div>
+
+    <!-- Background Music -->
+    <button id="music-toggle" class="music-toggle" type="button" aria-label="Tocar música" title="Tocar música">♪</button>
+    <audio id="background-music" loop preload="auto">
+        <source src="audio/photograph.mp3.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
